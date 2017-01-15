@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+<link href="https://fonts.googleapis.com/css?family=Comfortaa|Josefin+Slab" rel="stylesheet">
+    <style media="screen">
+    body{
+        text-align: center;
+        font-family: 'Josefin Slab', serif;
+
+    }
+      .container{
+        /*left:50%;*/
+        /*position: absolute;*/
+        width: 50%;
+
+      }
+
+      .main-container{
+        position: relative;;
+        left: 25%;
+      }
+      .container > * {
+        position: relative;
+        border-radius: 5px;
+        box-shadow: 1px 1px 4px rgba(0,0,0,.3);
+        /*left:50%;*/
+        color: grey;
+        font-family: 'Comfortaa', cursive;
+      }
+      #c{
+        background-color: Aquamarine;
+        width: 70px;
+        display: inline-block;
+        margin-right: 30px;
+      }
+
+      .code{
+        font-family: monospace;
+        white-space: pre-wrap;
+    background: hsl(30,80%,90%);
+      }
+
+      #c2{
+        background-color: Aquamarine;
+        width: 70px;
+            display: inline-block;
+            margin-left: 30px;
+      }
+
+      #e {
+        background-color: Crimson;
+        height: 60px;
+        color: white;
+      }
+
+      #a{
+        background-color: Cornsilk ;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>SPARKLE.JS</h1>
+    <h2>A jQuery plugin made during 'Cave Day' - Jan 15th, 2016 <br> by <a href="http://itp.evejweinberg.com/a" target="_blank">Eve Weinberg</a> </h2>
+<hr>
+<br>
+
+<div class="main-container">
+
+    <div class="container">
+      <h3 class="sparkle-rollover" id="a">Hi everyone! I have all three shapes that sparkle on hover!!</h3>
+      <br>
+      <p class="sparkle-rollover" id="b">Rollover me to see the default options.</p>
+      <br>
+      <img id="d" src="https://lh3.googleusercontent.com/-DwrynQMG0OQ/AAAAAAAAAAI/AAAAAAAAAsg/hCjcQLUCNpE/s46-c-k-no/photo.jpg" alt="">
+
+<br>
+<br>
+      <div class="sparkle-rollover" id="c">
+
+        or me! images can appear!
+
+      </div>
+
+      <div id="c2">
+
+        any image you WANT!
+
+      </div>
+
+<br>
+<br>
+      <div id="e">
+
+        I have gravity!
+
+      </div>
+      <br>
+      <p><i> 🙁 I have nothing. 🙁</i></p>
+
+    </div>
+      </div>
+
+    <hr>
+    <h3>How to use it:</h3>
+    <p>download the plugin here</p>
+    <p>Add it to your html, and also add jQuery if you do not already have it</p>
+    <p>Instantiate it on any object, using jQuery:</p>
+    <p>$('element-id-or-class-goes-here').sparkleHover();</p>
+    <p>Parametize it!</p>
+    <pre><code>$('#c').sparkleHover({
+      colors : ['#297E97', "#2EB8D5",'#36BEC1'],
+      num_sprites: 22,
+      lifespan: 3000,
+      radius: 500,
+      sprite_size: 40,
+      shape: 'circle',
+      image: 'http://loganchamber.org/files/Pumplin.jpg'
+
+    });</code></pre>
+    <p>Options are:</p>
+    <ul>
+      <li>colors: array or one color</li>
+      <li>radius: interger (this is the spread radius)</li>
+      <li>sprite_size: integer</li>
+      <li>shape: string (choose 'circle, 'triangle' or 'square')</li>
+      <li>lifespan: interger, in milliseconds</li>
+      <li>num_sprites: interget, number of sprites</li>
+      <li>image: url or relative path, if you want a clear background, make colors: rgba(0,0,0,0)</li>
+    </ul>
+
+    <script src="sparkleHover.js"></script>
+
+    <script type="text/javascript">
+    $(document).ready(function() {
+    	'use strict';
+
+      //dont pass in anything and use default options
+      $('#a').sparkleHover();
+
+      $('#b').sparkleHover().css('background', 'pink');
+
+
+        $('#c').sparkleHover({
+          colors : ['#297E97', "#2EB8D5",'#36BEC1'],
+          num_sprites: 22,
+          lifespan: 2000,
+          radius: 500,
+          sprite_size: 40,
+          shape: 'circle',
+          image: 'http://loganchamber.org/files/Pumplin.jpg'
+
+        });
+
+        $('#c2').sparkleHover({
+          num_sprites: 32,
+          lifespan: 2000,
+          radius: 200,
+          sprite_size: 50,
+          shape: 'circle',
+          colors: 'rgba(0,0,0,0)',
+          image: 'http://itp.evejweinberg.com/img/unicorn.gif'
+
+        });
+
+    });
+
+    $('#d').sparkleHover({
+      colors : ['yellow', 'orange'],
+      num_sprites: 72,
+      lifespan: 3000,
+      radius: 800,
+      sprite_size: 14,
+      shape: "square",
+
+    });
+
+    $('#a').sparkleHover({
+      colors : ['purple', 'pink', 'teal', 'grey'],
+      num_sprites: 72,
+      lifespan: 500,
+      radius: 800,
+      sprite_size: 24,
+      shape: "triangle"
+
+    });
+
+    $('#a').sparkleHover({
+      colors : ['yellow', 'red'],
+      num_sprites: 32,
+      lifespan: 700,
+      radius: 200,
+      sprite_size: 14,
+      shape: "circle"
+
+    });
+
+    $('#a').sparkleHover({
+      colors : ['green', 'teal','maroon'],
+      num_sprites: 12,
+      lifespan: 2000,
+      radius: 300,
+      sprite_size: 4,
+      shape: "square"
+
+    });
+
+    $('#e').sparkleHover({
+      colors : ['purple', 'pink', 'teal', 'grey'],
+      num_sprites: 72,
+      lifespan: 2000,
+      radius: 200,
+      sprite_size: 14,
+      shape: "triangle",
+      gravity: "true"
+
+    });
+
+    </script>
+
+  </body>
+</html>
