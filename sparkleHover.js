@@ -11,19 +11,12 @@
       sprite_size: 10,
       shape: 'circle',
       gravity: 'false',
-      // image: 'http://itp.evejweinberg.com/img/unicorn.gif'
     }
 
 
 
     var opts = $.extend({}, defaultOptions, opts);
 
-    //set default options for color, number, and lifespan
-
-    //create n number of new divs
-    //start them all at the center location of 'this'
-    //add a keyframe animation to the css of those divs
-    //after x number of seconds, remove the divs
 
     var $target = this,
     num_sprites = opts.num_sprites,
@@ -31,12 +24,12 @@
     allSprites = [],
     radius = opts.radius,
     sprite_size = opts.sprite_size,
-    shape = opts.shape,
+    shape = opts.shape.toLowerCase(),
     gravity = opts.gravity,
     image = opts.image,
     lifespan = opts.lifespan;
 
-//on hover of this,
+    //on hover of this,
   $target.mouseenter( function(){
 
       if (gravity == "true"){
@@ -46,9 +39,6 @@
         var centerX = $(this).width()/2 + $(this).offset().left;
         var centerY = $(this).offset().top+ $(this).height()/2;
       }
-
-      console.log($(this).offset().left)
-
 
       makeSprites(centerX, centerY)
 
@@ -61,7 +51,7 @@
       var newsprite = document.createElement('div');
       var rotateDeg = Math.random()*360
 
-      if (gravity == "true"){
+      if (gravity == "true" || gravity == true){
         var radSpread = Math.random() * (radius*2 - radius/4) + radius/4
 
       } else {

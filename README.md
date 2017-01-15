@@ -38,3 +38,4 @@ $('#c').sparkleHover({
 -  lifespan: interger, in milliseconds
 -  num_sprites: interget, number of sprites
 -  image: url or relative path, if you want a clear background, make colors: rgba(0,0,0,0)
+- gravity: string "true"/"false"
