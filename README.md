@@ -7,9 +7,15 @@ a jQuery plugin to add sparkles to anything on hover
 download the plugin here
 Add it to your html, and also add jQuery if you do not already have it
 Instantiate it on any object, using jQuery:
+
+```
 $('element-id-or-class-goes-here').sparkleHover();
+
+```
+
 Parametize it!
 
+```
 $('#c').sparkleHover({
   colors : ['#297E97', "#2EB8D5",'#36BEC1'],
   num_sprites: 22,
@@ -20,6 +26,8 @@ $('#c').sparkleHover({
   image: 'http://loganchamber.org/files/Pumplin.jpg'
 
 });
+
+```
 
 ##Options are:
 
