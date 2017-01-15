@@ -27,7 +27,8 @@
     shape = opts.shape.toLowerCase(),
     gravity = opts.gravity,
     image = opts.image,
-    lifespan = opts.lifespan;
+    lifespan = opts.lifespan,
+    fadetoOpacity = 100;
 
     //on hover of this,
   $target.mouseenter( function(){
@@ -93,6 +94,7 @@
           });
 
       } else if (shape == "triangle"){
+        fadetoOpacity = 0;
 
         $(newsprite).css({
             width: '0px',
@@ -115,17 +117,17 @@
 
       } else {
         if (i==0){
-          // alert($target[0])
+
           console.log("the shape chosen on this object is invalid. Try 'circle', 'triangle', or 'square'")
 
         }
-        // console.log($target[0])
+
       }
 
 
 
         $(newsprite).animate({
-          opacity: [ 90, "swing" ],
+          opacity: [ fadetoOpacity, "swing" ],
           left : centerX + Math.random() * (radius + radius) -radius,
           top : centerY + radSpread,
           width: [0,"easeInQuart"],
@@ -138,16 +140,9 @@
         });
 
       document.body.appendChild(newsprite);
-      // allSprites.push(newsprite);
-      // console.log('NewBatch! all sprites length is ' + allSprites.length)
 
     }
 
-    //could have removed sprites this way with javaacript
-    // setTimeout(function(){
-    //     // allSprites.splice(0,num_sprites)
-    //     console.log('TIme! all sprites length is ' + allSprites.length)
-    // }, lifespan)
 
   }
 
