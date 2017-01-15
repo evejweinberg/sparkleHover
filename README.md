@@ -1,5 +1,5 @@
 # sparkleHover
-a jQuery plugin to add sparkles to anything on hover
+a jQuery plugin to add sparkles to anything on hover -- made during 'Cave Day' on Jan 15th, 2017
 
 
 
