@@ -32,11 +32,11 @@ $('#c').sparkleHover({
 
 ##Options are:
 
--  *colors*: array or one color
--  *radius*: interger (this is the spread radius)
--  *sprite_size*: integer
--  *shape*: string (choose 'circle, 'triangle' or 'square')
--  *lifespan*: interger, in milliseconds
--  *num_sprites*: interget, number of sprites
--  *image*: url or relative path, if you want a clear background, make colors: rgba(0,0,0,0)
-- *gravity*: string "true"/"false"
+-  **colors**: array or one color
+-  **radius**: interger (this is the spread radius)
+-  **sprite_size**: integer
+-  **shape**: string (choose 'circle, 'triangle' or 'square')
+-  **lifespan**: interger, in milliseconds
+-  **num_sprites**: interget, number of sprites
+-  **image**: url or relative path, if you want a clear background, make colors: rgba(0,0,0,0)
+- **gravity**: string "true"/"false"
