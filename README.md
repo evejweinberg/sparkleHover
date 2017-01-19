@@ -5,7 +5,8 @@ a jQuery plugin to add sparkles to anything on hover -- made during 'Cave Day' o
 
 ##How to use it:
 download the plugin here:https://github.com/evejweinberg/sparkleHover/blob/master/sparkleHover.js
-Add it to your html, and also add jQuery if you do not already have it
+Add it to your html. Also add jQuery to your html if you do not already have it in your project.
+
 Instantiate it on any object, using jQuery:
 
 ```
