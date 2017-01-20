@@ -7,6 +7,24 @@
 
 <link href="https://fonts.googleapis.com/css?family=Comfortaa|Josefin+Slab" rel="stylesheet">
     <style media="screen">
+
+    .outside {
+      position: relative;
+      width: 100%;
+      margin: auto 0;
+    }
+
+    .sans{
+      font-family: Helvetica, sans-serif;
+    }
+
+    .list {
+      max-width: 400px;
+      left: 20%;
+      text-align: left;
+      justify-content: center;
+      position: relative;
+    }
     body{
         text-align: center;
         font-family: 'Josefin Slab', serif;
@@ -41,7 +59,7 @@
         white-space: pre-wrap;
     background: hsl(30,80%,90%);
       }
-      
+
       pre > code {
       white-space: pre;
     margin-top: -1.00em;
@@ -49,8 +67,8 @@
     color: grey;
     background-color: cornsilk;
     text-align: left;
-    width: 460px;
-    left: 30%;
+    width: 65%;
+left: 17%;
     padding: 5px;
     border: 1px grey solid;
     position: relative;
@@ -117,13 +135,14 @@
       </div>
 
     <hr>
-    <h3>How to use it:</h3>
-    <p>download the plugin <a href="https://github.com/evejweinberg/sparkleHover/blob/master/sparkleHover.js">here</a></p>
-    <p>Add it to your html, and also add jQuery if you do not already have it</p>
-    <p>Instantiate it on any object, using jQuery:</p>
+
+    <h3 class="sans">How to use it:</h3>
+    <p class="sans">download the plugin <a href="https://github.com/evejweinberg/sparkleHover/blob/master/sparkleHover.js">here</a></p>
+    <p class="sans">Add it to your html, and also add jQuery if you do not already have it</p>
+    <p class="sans">Instantiate it on any object, using jQuery:</p>
     <pre><code>  $('element-id-or-class-goes-here').sparkleHover();</code></pre>
 
-    <p>Parametize it!</p>
+    <p class="sans">Parametize it!</p>
     <pre><code>$('#c').sparkleHover({
       colors : ['#297E97', "#2EB8D5",'#36BEC1'],
       num_sprites: 22,
@@ -134,8 +153,11 @@
       image: 'http://loganchamber.org/files/Pumplin.jpg'
 
     });</code></pre>
-    <p>Options are:</p>
-    <ul>
+    <div class="outside">
+
+
+    <p class="sans">Options are:</p>
+    <ul class="sans list">
       <li>colors: array or one color</li>
       <li>radius: interger (this is the spread radius)</li>
       <li>sprite_size: integer</li>
@@ -144,6 +166,7 @@
       <li>num_sprites: interget, number of sprites</li>
       <li>image: url or relative path, if you want a clear background, make colors: rgba(0,0,0,0)</li>
     </ul>
+      </div>
 
     <script src="sparkleHover.js"></script>
 
